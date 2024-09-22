@@ -1,0 +1,368 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    top: 0;
+    width: 200px;
+    background-color: #f4f4f4;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    transition: width 0.3s;
+    overflow-y: auto;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.dashboard {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+@media (max-width: 1481px) {
+    .dashboard {
+        margin-left: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    .dashboard .section,
+    .images {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .block1, .block2, .block3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 10px;
+    }
+
+    .block1, .block2, .block3 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        padding: 10px;
+    }
+
+    .dashboard {
+        padding: 5px;
+    }
+
+    .dashboard .section {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        min-width: 120px;
+        font-size: 14px;
+    }
+
+    .double-sales {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .images {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .heart-circle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .heart {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        padding: 5px;
+    }
+
+    .dashboard .section {
+        padding: 8px;
+    }
+
+    .dashboard .section h2 {
+        font-size: 16px;
+    }
+
+    .dashboard .section p {
+        font-size: 12px;
+    }
+
+    button {
+        min-width: 100px;
+        font-size: 12px;
+    }
+}
+
+.s1 {
+    margin-top: -103px;
+}
+
+.dashboard .section {
+    background-color: #fff;
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.dashboard .section h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.dashboard .section p {
+    color: #666;
+    word-wrap: break-word;
+}
+
+.dashboard .highlight {
+    color: green;
+    font-weight: bold;
+}
+
+.store-info, .store-checklist {
+    flex: 1;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: green;
+    color: white;
+    border: none;
+    height: 40px;
+    width: auto;
+    min-width: 170px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+.progress-bar {
+    width: 250px;
+    height: 10px;
+    background-color: #ddd;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.green {
+    width: 12%;
+    height: 100%;
+    background-color: rgb(22, 215, 22);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.s2 {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    position: relative;
+}
+
+.s3 {
+    border: 2px solid black;
+    padding: 2px;
+    margin-left: 4px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.s3 span {
+    padding: 5px;
+}
+
+.s4 {
+    display: none;
+    position: absolute;
+    background-color: rgb(23, 23, 108);
+    color: rgba(62, 201, 12, 0.864);
+    padding: 5px;
+    border-radius: 5px;
+    top: -80px;
+    left: 50%;
+}
+
+.s3:hover + .s4 {
+    display: block;
+}
+
+.double-sales {
+    position: relative;
+    margin-top: 30px;
+    height: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.double-sales-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.double-sales h2 {
+    margin-top: -120px;
+}
+
+.double-sales p {
+    margin-top: 40px;
+}
+
+.double-sales button {
+    position: absolute;
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    height: 40px;
+    cursor: pointer;
+    bottom: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.double-sales:hover button {
+    background-color: green;
+    color: white;
+}
+
+.s5 {
+    margin-left: auto;
+}
+
+.s5 img {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
+.s6 {
+    position: absolute;
+    width: fit-content;
+    height: 15%;
+    left: 60%;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.h1 {
+    margin-left: 20%;
+}
+
+.images {
+    background-color: #fff;
+    width: 67%;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 70px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 18%;
+}
+
+.block1, .block2, .block3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 30%;
+    flex-shrink: 0;
+}
+
+.block1 img, .block2 img, .block3 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.heart-circle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.heart {
+    font-size: 45px;
+    color: rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+}
+
+.heart-circle.active .heart {
+    color: green;
+}
